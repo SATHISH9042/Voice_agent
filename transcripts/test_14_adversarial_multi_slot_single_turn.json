@@ -1,0 +1,83 @@
+{
+  "scenario": {
+    "id": "test_14_adversarial_multi_slot_single_turn",
+    "title": "Test 14: Adversarial - 5 Slots Volunteered in a Single Utterance",
+    "category": "Adversarial",
+    "expected": "QUALIFIED_HANDOFF",
+    "customer_name": "Neha Kapoor",
+    "dialogue": [
+      "Yes, Neha speaking.",
+      "Yes, I can talk.",
+      "It's my sole-owned residential property, original documents are available, I need 40 lakhs, and prefer 10 years.",
+      "I work as a salaried executive with salary credited to bank account.",
+      "Current market value is about 95 lakhs."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": "residential",
+    "ownership_status": "sole",
+    "documents_available": true,
+    "loan_amount": 4000000,
+    "loan_amount_pending_counter": false,
+    "occupation": "salaried",
+    "income_mode": "bank",
+    "market_value": "\u20b995 Lakhs",
+    "tenure": 10,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "handoff_ready": true,
+    "call_ended": true,
+    "current_stage": "HANDOFF"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Neha Kapoor, good day! I am Priya calling from Home Credit. Am I speaking with Neha Kapoor?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Neha speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, I can talk."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "It's my sole-owned residential property, original documents are available, I need 40 lakhs, and prefer 10 years."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Could you share whether you are salaried or self-employed, and whether your income is received through bank deposit or in cash?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I work as a salaried executive with salary credited to bank account."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Approximately what is the current market value of your property?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Current market value is about 95 lakhs."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Congratulations Neha Kapoor! Based on the preliminary details provided, you meet all the eligibility criteria for our pre-approved Loan Against Property offer. I am now transferring your application to our Senior Loan Expert, who will contact you shortly to share the exact interest rates, customized EMI plans, and assist you with the fast-track paperwork. Thank you for choosing Home Credit, and have a wonderful day!"
+    }
+  ]
+}

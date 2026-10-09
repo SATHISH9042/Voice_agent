@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Credit AI Voice Agent — Clean Studio</title>
+  <meta name="description" content="AI Voice Qualification Agent for Home Credit Loan Against Property (LAP)">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎙️</text></svg>">
+</head>
+<body>
+
+  <!-- Clean Top Navigation Bar -->
+  <header>
+    <div class="brand-box">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Zm-1 16.93V21a1 1 0 0 0 2 0v-2.07A8.005 8.005 0 0 0 20 11a1 1 0 1 0-2 0 6 6 0 1 1-12 0 1 1 0 0 0-2 0 8.005 8.005 0 0 0 7 7.93Z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">Home Credit Voice Agent</div>
+        <div class="brand-subtitle">LAP Qualification Studio</div>
+      </div>
+    </div>
+
+    <!-- Segmented Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="nav-tab-btn active" data-tab="tabSimulator">
+        <span>🎙️</span> Call Studio
+      </button>
+      <button class="nav-tab-btn" data-tab="tabInspector">
+        <span>📊</span> State & Eligibility
+      </button>
+      <button class="nav-tab-btn" data-tab="tabScenarios">
+        <span>🧪</span> Test Scenarios (16)
+      </button>
+      <button class="nav-tab-btn" data-tab="tabPrompt">
+        <span>📝</span> System Prompt
+      </button>
+    </nav>
+
+    <!-- Top Status & Actions -->
+    <div class="header-right">
+      <div class="status-pill">
+        <span class="status-dot" id="headerStatusDot"></span>
+        <span id="headerStatusText">Engine: Ready</span>
+      </div>
+      <button class="btn btn-ghost" id="btnHeaderReset" title="Reset current session">
+        Reset
+      </button>
+      <button class="btn btn-ghost" id="btnHeaderExport" title="Export conversation logs">
+        Export Logs
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container with Tabs -->
+  <main class="content-area">
+
+    <!-- ==========================================
+         TAB 1: LIVE CALL SIMULATOR
+         ========================================== -->
+    <section class="tab-pane active" id="tabSimulator">
+      <div class="call-stage">
+        
+        <!-- Minimal Caller Hero Card -->
+        <div class="caller-card" id="callerCard">
+          <div class="caller-info">
+            <div class="avatar-wrapper" id="agentAvatarBox">
+              <div class="ripple-ring"></div>
+              <div class="avatar-circle">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5Zm0 16a8 8 0 0 0 7.93-7h-2.02A6 6 0 0 1 6.09 11H4.07A8 8 0 0 0 11 17.93V21H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2h-2v-3.07A8.005 8.005 0 0 0 12 18Z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="caller-details">
+              <h2 id="agentNameLabel">Priya • AI Voice Agent</h2>
+              <p id="callStatusDesc">Connected with Rahul Sharma • Outbound LAP Offer</p>
+            </div>
+          </div>
+
+          <div class="call-actions">
+            <button class="btn btn-ghost" id="btnVoiceMute">
+              <span id="muteIcon">🔊</span>
+              <span id="muteText">Voice: ON</span>
+            </button>
+            <button class="btn btn-primary" id="btnCallAction">
+              Start Call
+            </button>
+          </div>
+        </div>
+
+        <!-- 7-Item Minimalist Pill Strip -->
+        <div class="checklist-strip">
+          <div class="strip-item" id="stripProperty">
+            <span class="icon">🏠</span> Property: <span id="stripValProperty">Pending</span>
+          </div>
+          <div class="strip-item" id="stripOwnership">
+            <span class="icon">👤</span> Ownership: <span id="stripValOwnership">Pending</span>
+          </div>
+          <div class="strip-item" id="stripDocs">
+            <span class="icon">📄</span> Originals: <span id="stripValDocs">Pending</span>
+          </div>
+          <div class="strip-item" id="stripLoan">
+            <span class="icon">💰</span> Loan: <span id="stripValLoan">Pending</span>
+          </div>
+          <div class="strip-item" id="stripIncome">
+            <span class="icon">💼</span> Income: <span id="stripValIncome">Pending</span>
+          </div>
+          <div class="strip-item" id="stripValuation">
+            <span class="icon">📈</span> Valuation: <span id="stripValValuation">Pending</span>
+          </div>
+          <div class="strip-item" id="stripTenure">
+            <span class="icon">⏱️</span> Tenure: <span id="stripValTenure">Pending</span>
+          </div>
+        </div>
+
+        <!-- Real-Time Decision Alert (Appears when decision made) -->
+        <div class="call-alert-banner" id="callAlertBanner"></div>
+
+        <!-- Chat Stream Box -->
+        <div class="chat-box">
+          <div class="chat-history" id="chatHistory">
+            <div class="chat-bubble agent">
+              <div class="bubble-meta">
+                <span>🤖 AI Voice Agent</span>
+              </div>
+              <div>Click <strong>Start Call</strong> or speak through your microphone to begin the qualification conversation.</div>
+            </div>
+          </div>
+
+          <!-- Quick Test Response Tray -->
+          <div class="quick-reply-tray" id="quickReplyTray">
+            <button class="quick-pill" data-text="Yes, Rahul speaking.">"Yes, speaking"</button>
+            <button class="quick-pill" data-text="Yes, I have a couple of minutes to talk.">"Free to talk"</button>
+            <button class="quick-pill" data-text="I'm in a meeting right now, please call me tomorrow at 3 PM.">"Busy in meeting"</button>
+            <button class="quick-pill" data-text="It's a residential flat worth about 1.2 crore, jointly owned with my wife.">"Residential + Joint + ₹1.2Cr"</button>
+            <button class="quick-pill" data-text="It is agricultural farmland in my village.">"Agricultural land"</button>
+            <button class="quick-pill" data-text="Yes, all original property documents are available at home.">"Originals ready"</button>
+            <button class="quick-pill" data-text="I only have photocopies available.">"Photocopies only"</button>
+            <button class="quick-pill" data-text="I need 50 lakhs for 10 years.">"₹50L for 10 yrs"</button>
+            <button class="quick-pill" data-text="I need 90 lakhs.">"₹90L (>75L)"</button>
+            <button class="quick-pill" data-text="Salaried software engineer with salary in HDFC bank account.">"Salaried + Bank"</button>
+            <button class="quick-pill" data-text="Self-employed, and all my income is in cash.">"Cash income"</button>
+            <button class="quick-pill" data-text="Actually I already have an existing loan and want to reduce EMI.">"Existing loan / EMI"</button>
+            <button class="quick-pill" data-text="Before that, what is your exact interest rate?">"What interest rate?"</button>
+          </div>
+
+          <!-- Input Bar -->
+          <div class="chat-footer">
+            <button class="mic-toggle-btn" id="btnMicToggle" title="Click to speak">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/>
+              </svg>
+            </button>
+            <input type="text" class="input-message" id="inputUserMessage" placeholder="Type customer reply or click mic to speak..." autocomplete="off">
+            <button class="btn btn-primary" id="btnSend">Send</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 2: STATE & ELIGIBILITY INSPECTOR
+         ========================================== -->
+    <section class="tab-pane" id="tabInspector">
+      <div class="inspector-layout">
+        
+        <!-- Left: 5-Layer Stepper -->
+        <div class="clean-card">
+          <div class="clean-card-title">
+            <span>5-Layer Architecture</span>
+          </div>
+          <div class="layer-stepper">
+            <div class="layer-step">
+              <span class="layer-step-name">1. Conversation Layer</span>
+              <span class="layer-step-badge badge-active" id="inspLayer1">Active</span>
+            </div>
+            <div class="layer-step">
+              <span class="layer-step-name">2. Business Rules</span>
+              <span class="layer-step-badge badge-dim" id="inspLayer2">Evaluating</span>
+            </div>
+            <div class="layer-step">
+              <span class="layer-step-name">3. State & Memory</span>
+              <span class="layer-step-badge badge-dim" id="inspLayer3">0/7 Slots</span>
+            </div>
+            <div class="layer-step">
+              <span class="layer-step-name">4. Out-of-Order Engine</span>
+              <span class="layer-step-badge badge-dim" id="inspLayer4">Ready</span>
+            </div>
+            <div class="layer-step">
+              <span class="layer-step-name">5. Final Decision Gate</span>
+              <span class="layer-step-badge badge-dim" id="inspLayer5">Pending</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+            <strong>Memory Policy:</strong> Multi-slot utterances are parsed simultaneously. Validated slots are committed and never re-queried.
+          </div>
+        </div>
+
+        <!-- Right: 7-Item Eligibility Table -->
+        <div class="clean-card">
+          <div class="clean-card-title" style="justify-content: space-between;">
+            <span>7 Eligibility Checklist Criteria</span>
+            <span class="layer-step-badge badge-active" id="inspStageBadge">STAGE: GREETING</span>
+          </div>
+
+          <table class="clean-table">
+            <thead>
+              <tr>
+                <th>Criterion</th>
+                <th>Extracted Value</th>
+                <th>Rule Policy</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Property Type</strong></td>
+                <td class="cell-val" id="tbPropertyVal">UNKNOWN</td>
+                <td style="color: var(--text-muted); font-size: 0.78rem;">Res / Comm / Ind (Agri rejected)</td>
+                <td id="tbPropertyBadge"><span class="layer-step-badge badge-dim">PENDING</span></td>
+              </tr>
+              <tr>
+                <td><strong>2. Ownership</strong></td>
+                <td class="cell-val" id="tbOwnershipVal">UNKNOWN</td>
+                <td style="color: var(--text-muted); font-size: 0.78rem;">Sole & Joint both eligible</td>
+                <td id="tbOwnershipBadge"><span class="layer-step-badge badge-dim">PENDING</span></td>
+              </tr>
+              <tr>
+                <td><strong>3. Original Documents</strong></td>
+                <td class="cell-val" id="tbDocsVal">UNKNOWN</td>
+                <td style="color: var(--text-muted); font-size: 0.78rem;">Originals mandatory</td>
+                <td id="tbDocsBadge"><span class="layer-step-badge badge-dim">PENDING</span></td>
+              </tr>
+              <tr>
+                <td><strong>4. Loan Amount</strong></td>
+                <td class="cell-val" id="tbLoanVal">UNKNOWN</td>
+                <td style="color: var(--text-muted); font-size: 0.78rem;">Max ₹75L cap (Counter-offer if >75L)</td>
+                <td id="tbLoanBadge"><span class="layer-step-badge badge-dim">PENDING</span></td>
+              </tr>
+              <tr>
+                <td><strong>5. Occupation + Income</strong></td>
+                <td class="cell-val" id="tbIncomeVal">UNKNOWN</td>
+                <td style="color: var(--text-muted); font-size: 0.78rem;">Bank credit only (Cash rejected)</td>
+                <td id="tbIncomeBadge"><span class="layer-step-badge badge-dim">PENDING</span></td>
+              </tr>
+              <tr>
+                <td><strong>6. Market Valuation</strong></td>
+                <td class="cell-val" id="tbMarketVal">UNKNOWN</td>
+                <td style="color: var(--text-muted); font-size: 0.78rem;">Customer estimate captured</td>
+                <td id="tbMarketBadge"><span class="layer-step-badge badge-dim">PENDING</span></td>
+              </tr>
+              <tr>
+                <td><strong>7. Desired Tenure</strong></td>
+                <td class="cell-val" id="tbTenureVal">UNKNOWN</td>
+                <td style="color: var(--text-muted); font-size: 0.78rem;">3 to 15 Years inclusive</td>
+                <td id="tbTenureBadge"><span class="layer-step-badge badge-dim">PENDING</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 3: TEST SCENARIOS BENCHMARK GALLERY
+         ========================================== -->
+    <section class="tab-pane" id="tabScenarios">
+      <div class="scenarios-toolbar">
+        <div>
+          <h2 style="font-size: 1.1rem; font-weight: 700;">16 Benchmark Test Scenarios</h2>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Listen to synthesized neural voice recordings or run scenarios directly in the simulator.</p>
+        </div>
+
+        <div class="filter-group">
+          <button class="clean-filter-btn active" data-filter="all">All (16)</button>
+          <button class="clean-filter-btn" data-filter="Core Flow">Core Flow</button>
+          <button class="clean-filter-btn" data-filter="Immediate Disqualification">Disqualifications</button>
+          <button class="clean-filter-btn" data-filter="Special Branch">Special</button>
+          <button class="clean-filter-btn" data-filter="Adversarial">Adversarial</button>
+        </div>
+      </div>
+
+      <div class="scenarios-deck" id="scenariosDeck">
+        <!-- Rendered via app.js -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 4: SYSTEM PROMPT & RUNTIME CONFIG
+         ========================================== -->
+    <section class="tab-pane" id="tabPrompt">
+      <div class="prompt-layout">
+        
+        <!-- Left: Variable Inputs -->
+        <div class="clean-card">
+          <div class="clean-card-title">Runtime Variables</div>
+          
+          <div class="form-field">
+            <label class="form-label">Customer Name</label>
+            <input type="text" class="input-clean" id="cfgCustomerName" value="Rahul Sharma">
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Agent Name</label>
+            <input type="text" class="input-clean" id="cfgAgentName" value="Priya">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;" class="form-field">
+            <div>
+              <label class="form-label">Gender</label>
+              <select class="input-clean" id="cfgAgentGender">
+                <option value="Female" selected>Female</option>
+                <option value="Male">Male</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Language</label>
+              <select class="input-clean" id="cfgLanguage">
+                <option value="English" selected>English</option>
+                <option value="Hindi">Hindi</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Company Name</label>
+            <input type="text" class="input-clean" id="cfgCompanyName" value="Home Credit">
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">RAG Knowledge Snippet</label>
+            <textarea class="input-clean textarea-clean" id="cfgRagSnippet">Home Credit offers secured Loan Against Property up to ₹75 Lakhs. Branch hours are 9:30 AM - 6:30 PM, Mon-Sat. Interest rate is customized by senior expert after qualification.</textarea>
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" id="btnApplyConfig">
+            Apply Variables
+          </button>
+        </div>
+
+        <!-- Right: Prompt Text -->
+        <div class="clean-card">
+          <div class="clean-card-title" style="justify-content: space-between;">
+            <span>System Prompt View</span>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-ghost" id="btnTogglePromptMode">Toggle Raw/Rendered</button>
+              <button class="btn btn-primary" id="btnCopyPrompt">Copy Prompt</button>
+            </div>
+          </div>
+          <div class="prompt-display-box" id="promptDisplayBox">Loading prompt...</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

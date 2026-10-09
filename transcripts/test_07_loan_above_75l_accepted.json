@@ -1,0 +1,128 @@
+{
+  "scenario": {
+    "id": "test_07_loan_above_75l_accepted",
+    "title": "Test 7: Loan Amount > \u20b975 Lakh with Counter-Offer Acceptance",
+    "category": "Edge Case / Counter-Offer",
+    "expected": "QUALIFIED_HANDOFF_AT_75L",
+    "customer_name": "Rajesh Singhania",
+    "dialogue": [
+      "Yes, Rajesh speaking.",
+      "Yes, go ahead.",
+      "Commercial showroom.",
+      "Sole ownership.",
+      "Yes, originals are available.",
+      "I need 90 lakhs for my business expansion.",
+      "Yes, that's fine, I can proceed with the maximum 75 lakhs.",
+      "Self-employed business owner, bank account receipts.",
+      "Valuation is about 2.5 crore.",
+      "Tenure of 12 years."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": "commercial",
+    "ownership_status": "sole",
+    "documents_available": true,
+    "loan_amount": 7500000,
+    "loan_amount_pending_counter": false,
+    "occupation": "self-employed",
+    "income_mode": "bank",
+    "market_value": "\u20b92.5 Crore",
+    "tenure": 12,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "handoff_ready": true,
+    "call_ended": true,
+    "current_stage": "HANDOFF"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Rajesh Singhania, good day! I am Priya calling from Home Credit. Am I speaking with Rajesh Singhania?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Rajesh speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, go ahead."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Commercial showroom."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Got that. Is this property in your sole ownership, or is it jointly owned with someone else?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Sole ownership."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. Do you have the original property documents available for physical verification?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, originals are available."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Understood. What is the approximate loan amount you are looking to borrow?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I need 90 lakhs for my business expansion."
+    },
+    {
+      "speaker": "Agent",
+      "text": "The current pre-approved offer is available for up to a maximum limit of \u20b975 lakhs. Would you like to proceed with the maximum eligible amount of \u20b975 lakhs?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, that's fine, I can proceed with the maximum 75 lakhs."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Got it. Is your monthly income credited directly to your bank account, or is it received in cash?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Self-employed business owner, bank account receipts."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Approximately what is the current market value of your property?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Valuation is about 2.5 crore."
+    },
+    {
+      "speaker": "Agent",
+      "text": "What repayment tenure would you prefer for this loan, between 3 to 15 years?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Tenure of 12 years."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Congratulations Rajesh Singhania! Based on the preliminary details provided, you meet all the eligibility criteria for our pre-approved Loan Against Property offer. I am now transferring your application to our Senior Loan Expert, who will contact you shortly to share the exact interest rates, customized EMI plans, and assist you with the fast-track paperwork. Thank you for choosing Home Credit, and have a wonderful day!"
+    }
+  ]
+}

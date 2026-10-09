@@ -1,0 +1,65 @@
+{
+  "scenario": {
+    "id": "test_10_emi_reduction_request",
+    "title": "Test 10: EMI Reduction / Balance Transfer Request",
+    "category": "Special Branch",
+    "expected": "TRANSFER_SPECIALIST",
+    "customer_name": "Sunil Mehta",
+    "dialogue": [
+      "Yes, Sunil speaking.",
+      "Yes, sure.",
+      "I am actually looking to reduce my existing EMI through a balance transfer."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": true,
+    "transfer_specialist_routed": true,
+    "property_type": null,
+    "ownership_status": null,
+    "documents_available": null,
+    "loan_amount": null,
+    "loan_amount_pending_counter": false,
+    "occupation": null,
+    "income_mode": null,
+    "market_value": null,
+    "tenure": null,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "handoff_ready": false,
+    "call_ended": true,
+    "current_stage": "TRANSFER"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Sunil Mehta, good day! I am Priya calling from Home Credit. Am I speaking with Sunil Mehta?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Sunil speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, sure."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I am actually looking to reduce my existing EMI through a balance transfer."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you for sharing that, Sunil Mehta. Since you already have an existing loan on this property and are looking for EMI reduction or loan transfer, this is handled directly by our dedicated Loan Transfer & EMI Specialist. I am arranging a direct transfer callback for you. Thank you for your time with Home Credit!"
+    }
+  ]
+}

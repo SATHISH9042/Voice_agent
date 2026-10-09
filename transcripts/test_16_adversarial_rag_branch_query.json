@@ -1,0 +1,128 @@
+{
+  "scenario": {
+    "id": "test_16_adversarial_rag_branch_query",
+    "title": "Test 16: Adversarial - RAG Company & Branch Inquiry Diversion",
+    "category": "Adversarial",
+    "expected": "QUALIFIED_HANDOFF",
+    "customer_name": "Pradeep Deshmukh",
+    "dialogue": [
+      "Yes, Pradeep speaking.",
+      "Yes, I have time.",
+      "Tell me first, where is your nearest office and what are your branch hours?",
+      "Understood. The property is commercial space.",
+      "Sole owner.",
+      "Original documents are available.",
+      "60 lakhs.",
+      "Self-employed consultant with bank deposit fees.",
+      "Valued around 1.8 crore.",
+      "12 years."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": "commercial",
+    "ownership_status": "sole",
+    "documents_available": true,
+    "loan_amount": 6000000,
+    "loan_amount_pending_counter": false,
+    "occupation": "self-employed",
+    "income_mode": "bank",
+    "market_value": "\u20b91.8 Crore",
+    "tenure": 12,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "handoff_ready": true,
+    "call_ended": true,
+    "current_stage": "HANDOFF"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Pradeep Deshmukh, good day! I am Priya calling from Home Credit. Am I speaking with Pradeep Deshmukh?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Pradeep speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, I have time."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Tell me first, where is your nearest office and what are your branch hours?"
+    },
+    {
+      "speaker": "Agent",
+      "text": "For your information, Home Credit is an established non-banking financial institution offering trusted personal finance and secured loans across India. Branch office hours are 9:30 AM to 6:30 PM, Monday through Saturday. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Understood. The property is commercial space."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Got that. Is this property in your sole ownership, or is it jointly owned with someone else?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Sole owner."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. Do you have the original property documents available for physical verification?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Original documents are available."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Understood. What is the approximate loan amount you are looking to borrow?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "60 lakhs."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Could you share whether you are salaried or self-employed, and whether your income is received through bank deposit or in cash?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Self-employed consultant with bank deposit fees."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Approximately what is the current market value of your property?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Valued around 1.8 crore."
+    },
+    {
+      "speaker": "Agent",
+      "text": "What repayment tenure would you prefer for this loan, between 3 to 15 years?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "12 years."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Congratulations Pradeep Deshmukh! Based on the preliminary details provided, you meet all the eligibility criteria for our pre-approved Loan Against Property offer. I am now transferring your application to our Senior Loan Expert, who will contact you shortly to share the exact interest rates, customized EMI plans, and assist you with the fast-track paperwork. Thank you for choosing Home Credit, and have a wonderful day!"
+    }
+  ]
+}

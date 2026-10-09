@@ -1,0 +1,101 @@
+{
+  "scenario": {
+    "id": "test_03_cash_income",
+    "title": "Test 3: Cash Income Disqualification",
+    "category": "Immediate Disqualification",
+    "expected": "DISQUALIFIED_CASH_INCOME",
+    "customer_name": "Vikas Verma",
+    "dialogue": [
+      "Yes, Vikas speaking.",
+      "Yes, I can talk.",
+      "It's a commercial shop in Lajpat Nagar.",
+      "Sole ownership.",
+      "Yes, original title deed is with me.",
+      "Around 35 lakhs.",
+      "I am self-employed running a grocery store, and all my income is in cash."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": "commercial",
+    "ownership_status": "sole",
+    "documents_available": true,
+    "loan_amount": 3500000,
+    "loan_amount_pending_counter": false,
+    "occupation": "self-employed",
+    "income_mode": "cash",
+    "market_value": null,
+    "tenure": null,
+    "disqualified": true,
+    "disqualification_reason": "Cash income mode is strictly ineligible. Income must be credited to a bank account.",
+    "handoff_ready": false,
+    "call_ended": true,
+    "current_stage": "DISQUALIFIED"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Vikas Verma, good day! I am Priya calling from Home Credit. Am I speaking with Vikas Verma?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Vikas speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, I can talk."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "It's a commercial shop in Lajpat Nagar."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Got that. Is this property in your sole ownership, or is it jointly owned with someone else?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Sole ownership."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. Do you have the original property documents available for physical verification?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, original title deed is with me."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Understood. What is the approximate loan amount you are looking to borrow?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Around 35 lakhs."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Could you share whether you are salaried or self-employed, and whether your income is received through bank deposit or in cash?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I am self-employed running a grocery store, and all my income is in cash."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you for letting me know, Vikas Verma. To qualify for this Loan Against Property offer, income must be routed through verified bank credit channels. Because your income is received in cash, we cannot process this specific pre-approved offer. We appreciate your time and trust in Home Credit!"
+    }
+  ]
+}

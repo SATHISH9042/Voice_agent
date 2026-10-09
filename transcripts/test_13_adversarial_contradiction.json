@@ -1,0 +1,65 @@
+{
+  "scenario": {
+    "id": "test_13_adversarial_contradiction",
+    "title": "Test 13: Adversarial - Contradiction & Self-Correction",
+    "category": "Adversarial",
+    "expected": "DISQUALIFIED_AGRICULTURAL",
+    "customer_name": "Harish Rawat",
+    "dialogue": [
+      "Yes, speaking.",
+      "Yes, go ahead.",
+      "It's residential... wait, actually no, it's agricultural farmland."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": "agricultural",
+    "ownership_status": null,
+    "documents_available": null,
+    "loan_amount": null,
+    "loan_amount_pending_counter": false,
+    "occupation": null,
+    "income_mode": null,
+    "market_value": null,
+    "tenure": null,
+    "disqualified": true,
+    "disqualification_reason": "Agricultural property is strictly ineligible for Loan Against Property.",
+    "handoff_ready": false,
+    "call_ended": true,
+    "current_stage": "DISQUALIFIED"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Harish Rawat, good day! I am Priya calling from Home Credit. Am I speaking with Harish Rawat?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, go ahead."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "It's residential... wait, actually no, it's agricultural farmland."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you for clarifying, Harish Rawat. Currently, our pre-approved Loan Against Property program is exclusively for residential, commercial, and industrial properties, and does not support agricultural land. Therefore, we cannot proceed with this offer today. We truly appreciate your relationship with Home Credit!"
+    }
+  ]
+}

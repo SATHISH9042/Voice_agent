@@ -1,6 +1,11 @@
 # Home Credit AI Voice Agent — Loan Against Property (LAP) Qualification
 ### SalesAgents AI — AI Intern / Prompt Engineer Assignment Submission
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen?style=for-the-badge&logo=github)](https://sathish9042.github.io/Voice_agent/)
+[![Status](https://img.shields.io/badge/Status-16%2F16%20Tests%20Passed-blue?style=for-the-badge)](https://sathish9042.github.io/Voice_agent/)
+
+🌐 **Live Web Application**: [https://sathish9042.github.io/Voice_agent/](https://sathish9042.github.io/Voice_agent/)
+
 This repository contains the complete, production-grade implementation of the **Home Credit AI Voice Agent** for Loan Against Property (LAP) qualification, strictly following the specifications and requirements defined in the **SalesAgents AI Assignment Preparation Guide**.
 
 ---

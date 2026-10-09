@@ -1,0 +1,65 @@
+{
+  "scenario": {
+    "id": "test_12_busy_customer",
+    "title": "Test 12: Busy Customer Callback Flow",
+    "category": "Special Branch",
+    "expected": "BUSY_CALLBACK_SCHEDULED",
+    "customer_name": "Gaurav Malhotra",
+    "dialogue": [
+      "Yes, Gaurav here.",
+      "I'm in an urgent client meeting right now, please call me later.",
+      "Tomorrow afternoon at 3 PM would be ideal."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": true,
+    "callback_time": "Tomorrow afternoon at 3 PM would be ideal.",
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": null,
+    "ownership_status": null,
+    "documents_available": null,
+    "loan_amount": null,
+    "loan_amount_pending_counter": false,
+    "occupation": null,
+    "income_mode": null,
+    "market_value": null,
+    "tenure": null,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "handoff_ready": false,
+    "call_ended": true,
+    "current_stage": "ENDED"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Gaurav Malhotra, good day! I am Priya calling from Home Credit. Am I speaking with Gaurav Malhotra?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Gaurav here."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I'm in an urgent client meeting right now, please call me later."
+    },
+    {
+      "speaker": "Agent",
+      "text": "I completely understand! What would be a convenient date and time for us to call you back?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Tomorrow afternoon at 3 PM would be ideal."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you, Gaurav Malhotra. We have scheduled a callback for Tomorrow afternoon at 3 PM would be ideal.. Have a great day!"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "scenario": {
+    "id": "test_15_adversarial_roi_diversion",
+    "title": "Test 15: Adversarial - Interest Rate / ROI Diversion Handling",
+    "category": "Adversarial",
+    "expected": "QUALIFIED_HANDOFF",
+    "customer_name": "Arjun Nair",
+    "dialogue": [
+      "Yes, Arjun speaking.",
+      "Yes, tell me.",
+      "Wait, before we start, what is your exact interest rate and ROI?",
+      "Okay got it. It is a residential property.",
+      "Sole owner.",
+      "Original papers are available.",
+      "50 lakhs.",
+      "Salaried with bank credit.",
+      "About 1.1 crore.",
+      "10 years."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": "residential",
+    "ownership_status": "sole",
+    "documents_available": true,
+    "loan_amount": 5000000,
+    "loan_amount_pending_counter": false,
+    "occupation": "salaried",
+    "income_mode": "bank",
+    "market_value": "\u20b91.1 Crore",
+    "tenure": 10,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "handoff_ready": true,
+    "call_ended": true,
+    "current_stage": "HANDOFF"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Arjun Nair, good day! I am Priya calling from Home Credit. Am I speaking with Arjun Nair?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Arjun speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, tell me."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Wait, before we start, what is your exact interest rate and ROI?"
+    },
+    {
+      "speaker": "Agent",
+      "text": "Regarding interest rates, our exact rates are personalized based on your property valuation and financial profile, and will be provided directly by our Senior Loan Expert after this brief qualification. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Okay got it. It is a residential property."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Got that. Is this property in your sole ownership, or is it jointly owned with someone else?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Sole owner."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. Do you have the original property documents available for physical verification?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Original papers are available."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Understood. What is the approximate loan amount you are looking to borrow?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "50 lakhs."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Could you share whether you are salaried or self-employed, and whether your income is received through bank deposit or in cash?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Salaried with bank credit."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Approximately what is the current market value of your property?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "About 1.1 crore."
+    },
+    {
+      "speaker": "Agent",
+      "text": "What repayment tenure would you prefer for this loan, between 3 to 15 years?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "10 years."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Congratulations Arjun Nair! Based on the preliminary details provided, you meet all the eligibility criteria for our pre-approved Loan Against Property offer. I am now transferring your application to our Senior Loan Expert, who will contact you shortly to share the exact interest rates, customized EMI plans, and assist you with the fast-track paperwork. Thank you for choosing Home Credit, and have a wonderful day!"
+    }
+  ]
+}

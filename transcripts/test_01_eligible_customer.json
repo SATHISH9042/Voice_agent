@@ -1,0 +1,119 @@
+{
+  "scenario": {
+    "id": "test_01_eligible_customer",
+    "title": "Test 1: Perfect Eligible Customer",
+    "category": "Core Flow",
+    "expected": "QUALIFIED_HANDOFF",
+    "customer_name": "Rahul Sharma",
+    "dialogue": [
+      "Yes, Rahul speaking.",
+      "Yes, I have a couple of minutes.",
+      "It is a residential apartment in Gurgaon.",
+      "It is sole ownership under my name.",
+      "Yes, all original papers are kept safely at home.",
+      "I need around 50 lakhs.",
+      "I am salaried as a software architect and my salary is credited directly to my HDFC bank account.",
+      "The market value is around 1.2 crore.",
+      "I would prefer a 10 year tenure."
+    ]
+  },
+  "final_state": {
+    "verified": true,
+    "is_busy": false,
+    "callback_time": null,
+    "existing_loan_detected": null,
+    "transfer_specialist_routed": false,
+    "property_type": "residential",
+    "ownership_status": "sole",
+    "documents_available": true,
+    "loan_amount": 5000000,
+    "loan_amount_pending_counter": false,
+    "occupation": "salaried",
+    "income_mode": "bank",
+    "market_value": "\u20b91.2 Crore",
+    "tenure": 10,
+    "disqualified": false,
+    "disqualification_reason": null,
+    "handoff_ready": true,
+    "call_ended": true,
+    "current_stage": "HANDOFF"
+  },
+  "history": [
+    {
+      "speaker": "Agent",
+      "text": "Hello Rahul Sharma, good day! I am Priya calling from Home Credit. Am I speaking with Rahul Sharma?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, Rahul speaking."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Great! Do you have a couple of minutes to speak right now?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, I have a couple of minutes."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. To check your eligibility, could you please tell me what type of property you own\u2014is it residential, commercial, or industrial?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "It is a residential apartment in Gurgaon."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Got that. Is this property in your sole ownership, or is it jointly owned with someone else?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "It is sole ownership under my name."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Thank you. Do you have the original property documents available for physical verification?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "Yes, all original papers are kept safely at home."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Understood. What is the approximate loan amount you are looking to borrow?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I need around 50 lakhs."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Could you share whether you are salaried or self-employed, and whether your income is received through bank deposit or in cash?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I am salaried as a software architect and my salary is credited directly to my HDFC bank account."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Approximately what is the current market value of your property?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "The market value is around 1.2 crore."
+    },
+    {
+      "speaker": "Agent",
+      "text": "What repayment tenure would you prefer for this loan, between 3 to 15 years?"
+    },
+    {
+      "speaker": "Customer",
+      "text": "I would prefer a 10 year tenure."
+    },
+    {
+      "speaker": "Agent",
+      "text": "Congratulations Rahul Sharma! Based on the preliminary details provided, you meet all the eligibility criteria for our pre-approved Loan Against Property offer. I am now transferring your application to our Senior Loan Expert, who will contact you shortly to share the exact interest rates, customized EMI plans, and assist you with the fast-track paperwork. Thank you for choosing Home Credit, and have a wonderful day!"
+    }
+  ]
+}
